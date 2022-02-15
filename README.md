@@ -1,3 +1,7 @@
+
+
+![Screenshot 2022-02-16 000003](https://user-images.githubusercontent.com/88138560/154123689-6b69b367-3f44-48a8-9dbd-ff73e2e803a9.png)
+
 # AngularMovieApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
