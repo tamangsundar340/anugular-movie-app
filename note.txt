@@ -1,0 +1,14 @@
+## To create module
+ng g m feature
+
+## create component inside the module
+ng g c feature/star-rating
+
+
+## export component
+  exports : [
+    StarRatingComponent 
+  ]
+
+
+## import NgModule

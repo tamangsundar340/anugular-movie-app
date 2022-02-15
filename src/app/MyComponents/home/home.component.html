@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div class="mt-5 pt-5" style="width: 80%; margin:0px auto;">
+  <div class="row my-4" *ngIf="!isLoading">
+    <!-- left side section -->
+    <div class="col-md-9">
+      <!-- trending movie section -->
+      <div class="m-4 pt-2 row">
+        <h4><b>Trending movies</b></h4>
+        <hr>
+        <div class="card p-2" *ngFor="let movie of trendingMovies" (click)="getMovie('trending', movie.id)">
+          <img class="card-img-top" [src]="movie.cover" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.name}}</h5>
+            <p class="card-text">{{movie.rating}}</p>
+
+            <!-- rating -->
+            <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+              </span>
+            </ng-template>
+            <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+
+          </div>
+        </div>
+      </div>
+      <p class="text-center">
+        <button class="btn">See all >></button>
+      </p>
+      <!-- trending movie section end -->
+
+      <!-- theature movie section -->
+      <div class="m-2 pt-2 row">
+        <h4><b>Trending in theature</b></h4>
+        <hr>
+        <div class="card p-2" *ngFor="let movie of theatureMovies" (click)="getMovie('theature', movie.id)">
+          <img class="card-img-top" [src]="movie.cover" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.name}}</h5>
+            <p class="card-text">{{movie.rating}}</p>
+
+            <!-- rating -->
+            <ng-template #t let-fill="fill">
+              <span class="star" [class.full]="fill === 100">
+                <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+              </span>
+            </ng-template>
+            <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+
+          </div>
+        </div>
+      </div>
+      <p class="text-center">
+        <button class="btn">See all >></button>
+      </p>
+      <!-- theature movie section end -->
+    </div>
+    <!-- left side section end-->
+
+    <!-- right side section -->
+    <div class="col-md-3 mt-3 pt-2">
+      <h4><b>All time popular</b></h4>
+      <hr>
+      <div class="card p-2" *ngFor="let movie of populorMovies">
+        <div class="card-body" (click)="getMovie('popular', movie.id)">
+          <h5 class="card-title">{{movie.name}}</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- rating -->
+              <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+            </div>
+            <div class="col-md-6">
+              <p class="card-text popular-rating">{{movie.rating}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- right side end -->
+  </div>
+</div>
+
+<div *ngIf="isLoading">
+  <h4>Loading...</h4>
+</div>

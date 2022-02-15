@@ -1,0 +1,38 @@
+<div class="row login-wrapper">
+    <div class="col-md-6">
+        <img src="assets/images/film.png" alt="" class="img-fluid img-logo">
+    </div>
+    <div class="col-md-6">
+        <div class="m-4">
+            <form class="pt-5 mt-4 p-4" style="background-color: white; border-radius: 10px;" [formGroup]="loginForm" (ngSubmit)="formSubmit()">
+                <p class="text-danger text-center" *ngIf="errorMessage">{{errorMessage}}!!</p>
+                <br>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <small  class="text-danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">Email is invalid & required</small>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <small class="text-danger"  *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Pasword is invalid</small>
+                <br>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+            <div class="pt-5">
+                <h1 class="text-center movie-heading">
+                    Bmovies
+                </h1>
+                <p class="ml-auto style-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis est aspernatur nisi dolorum consectetur praesentium ipsam libero doloribus facilis 
+                    quisquam delectus, odit maxime at iste vitae dolorem quo ipsa ipsum eos. Accusamus unde molestiae illo vel reiciendis aliquid eveniet doloremque deleniti 
+                    facere ipsam, voluptates qui. Est corporis reprehenderit neque et!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

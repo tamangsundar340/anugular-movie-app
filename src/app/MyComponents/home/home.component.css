@@ -1,0 +1,28 @@
+.card{
+    cursor: pointer;
+    width: 17rem; 
+    border: none;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #d3d3d3;
+  }
+  .full {
+    color: red;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: red;
+  }
+
+  .popular-rating{
+    float: left; 
+    position: absolute;
+    left: 263px;
+    top: 82px;
+  }

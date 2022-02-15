@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    font-family: 'Creepster', cursive;
+}
+.common-tag{
+    cursor: pointer;
+}
+.movie-heading{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Creepster', cursive;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.star {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #d3d3d3;
+  }
+  .full {
+    color: red;
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: red;
+  }
+
+  .popular-rating{
+    float: left; 
+    position: absolute;
+    left: 263px;
+    top: 82px;
+  }

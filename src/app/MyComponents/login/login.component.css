@@ -1,0 +1,24 @@
+.img-logo{
+    object-fit: cover;
+    height: 100vh;
+}
+.login-wrapper{
+    background: linear-gradient(135deg, #ffe645 0%, #e2aa02 100%);
+}
+.movie-heading{
+    font-size: 44px;
+}
+
+.style-text{
+    font-size: 18px;
+    margin-right: 40px;
+    text-decoration: none;
+    font-family: 'Creepster', cursive;
+    text-align: left;
+
+    letter-spacing: 5px;
+    top: 200px;
+    right: 50px;
+    text-align: right;
+
+}
